@@ -77,8 +77,9 @@ class AjaxHandler
         $limit = max(1, min(500, (int) ($_GET['limit'] ?? 25)));
         $sortCol = $_GET['sort'] ?? 'id';
         $sortDir = $_GET['dir'] ?? 'asc';
+        $search = trim($_GET['search'] ?? '');
 
-        return $this->service->getClients($page, $limit, $sortCol, $sortDir);
+        return $this->service->getClients($page, $limit, $sortCol, $sortDir, $search);
     }
 
     private function setClientVerified(): array

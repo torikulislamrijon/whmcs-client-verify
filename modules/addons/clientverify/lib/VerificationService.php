@@ -24,7 +24,7 @@ class VerificationService
      * @param string $sortDir
      * @return array<string, mixed>
      */
-    public function getClients(int $page = 1, int $limit = 25, string $sortCol = 'id', string $sortDir = 'asc'): array
+    public function getClients(int $page = 1, int $limit = 25, string $sortCol = 'id', string $sortDir = 'asc', string $search = ''): array
     {
         $allowedCols = ['id', 'firstname', 'lastname', 'email', 'is_verified'];
         $sortCol = in_array($sortCol, $allowedCols, true) ? $sortCol : 'id';
@@ -40,6 +40,19 @@ class VerificationService
                 'c.companyname',
                 Capsule::raw('COALESCE(cv.is_verified, 0) as is_verified')
             );
+
+        if ($search !== '') {
+            $query->where(function ($q) use ($search) {
+                if (is_numeric($search)) {
+                    $q->where('c.id', (int) $search);
+                }
+                $q->orWhere('c.firstname', 'like', '%' . $search . '%')
+                    ->orWhere('c.lastname', 'like', '%' . $search . '%')
+                    ->orWhere('c.email', 'like', '%' . $search . '%')
+                    ->orWhere('c.companyname', 'like', '%' . $search . '%')
+                    ->orWhere(Capsule::raw("CONCAT(c.firstname, ' ', c.lastname)"), 'like', '%' . $search . '%');
+            });
+        }
 
         $totalRecords = $query->count();
         $totalPages = $totalRecords > 0 ? (int) ceil($totalRecords / $limit) : 1;
