@@ -1,0 +1,904 @@
+/* ═══════════════════════════════════════════════════
+   Client Verification Module — Stylesheet
+   Premium modern design using WHMCS-native Bootstrap
+   ═══════════════════════════════════════════════════ */
+
+:root {
+    --cv-primary: #4f46e5;
+    --cv-primary-light: #818cf8;
+    --cv-primary-bg: #eef2ff;
+    --cv-success: #059669;
+    --cv-success-bg: #ecfdf5;
+    --cv-warning: #d97706;
+    --cv-warning-bg: #fffbeb;
+    --cv-danger: #dc2626;
+    --cv-danger-bg: #fef2f2;
+    --cv-gray-50: #f8fafc;
+    --cv-gray-100: #f1f5f9;
+    --cv-gray-200: #e2e8f0;
+    --cv-gray-300: #cbd5e1;
+    --cv-gray-400: #94a3b8;
+    --cv-gray-500: #64748b;
+    --cv-gray-600: #475569;
+    --cv-gray-700: #334155;
+    --cv-gray-800: #1e293b;
+    --cv-gray-900: #0f172a;
+    --cv-radius: 8px;
+    --cv-radius-lg: 12px;
+    --cv-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --cv-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.04);
+    --cv-transition: 0.2s ease;
+}
+
+/* ─── Admin Header ───────────────────────────────── */
+.cv-admin-wrap {
+    max-width: 100%;
+    padding: 0;
+}
+
+.cv-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding: 20px 0 16px;
+    border-bottom: 2px solid var(--cv-gray-100);
+}
+
+.cv-header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cv-gray-900);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cv-header h1 i {
+    color: var(--cv-primary);
+    font-size: 1.3rem;
+}
+
+.cv-version {
+    font-size: 0.75rem;
+    color: var(--cv-gray-400);
+    background: var(--cv-gray-100);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    margin-left: 12px;
+}
+
+/* ─── Tabs ───────────────────────────────────────── */
+.cv-tabs {
+    border-bottom: 2px solid var(--cv-gray-200);
+    margin-bottom: 0;
+}
+
+.cv-tabs>li>a {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--cv-gray-500);
+    border: none !important;
+    border-bottom: 3px solid transparent !important;
+    padding: 12px 20px;
+    transition: all var(--cv-transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cv-tabs>li>a:hover {
+    color: var(--cv-primary);
+    background: transparent;
+    border-bottom-color: var(--cv-primary-light) !important;
+}
+
+.cv-tabs>li.active>a,
+.cv-tabs>li.active>a:hover,
+.cv-tabs>li.active>a:focus {
+    color: var(--cv-primary);
+    border: none !important;
+    border-bottom: 3px solid var(--cv-primary) !important;
+    background: transparent;
+}
+
+.cv-tab-content {
+    background: #fff;
+    border: 1px solid var(--cv-gray-200);
+    border-top: none;
+    border-radius: 0 0 var(--cv-radius-lg) var(--cv-radius-lg);
+    padding: 24px;
+}
+
+/* ─── Toolbar ────────────────────────────────────── */
+.cv-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.cv-search-wrap {
+    position: relative;
+    width: 300px;
+    max-width: 100%;
+}
+
+.cv-search-wrap i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--cv-gray-400);
+    font-size: 0.85rem;
+}
+
+.cv-search-wrap input {
+    padding-left: 36px;
+    border-radius: var(--cv-radius);
+    border: 1px solid var(--cv-gray-200);
+    height: 38px;
+    font-size: 0.9rem;
+    transition: border-color var(--cv-transition);
+}
+
+.cv-search-wrap input:focus {
+    border-color: var(--cv-primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.cv-pagination-info {
+    font-size: 0.85rem;
+    color: var(--cv-gray-500);
+}
+
+/* ─── Tables ─────────────────────────────────────── */
+.cv-table {
+    margin-bottom: 0;
+}
+
+.cv-table thead th {
+    background: var(--cv-gray-50);
+    border-bottom: 2px solid var(--cv-gray-200);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--cv-gray-500);
+    padding: 12px 16px;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition: background var(--cv-transition);
+}
+
+.cv-table thead th:hover {
+    background: var(--cv-gray-100);
+}
+
+.cv-table thead th i.fas {
+    margin-left: 6px;
+    font-size: 0.7rem;
+    opacity: 0.4;
+}
+
+.cv-table thead th.sorted i.fas {
+    opacity: 1;
+    color: var(--cv-primary);
+}
+
+.cv-table tbody td {
+    padding: 14px 16px;
+    vertical-align: middle;
+    border-top: 1px solid var(--cv-gray-100);
+    font-size: 0.9rem;
+    color: var(--cv-gray-700);
+}
+
+.cv-table tbody tr:hover {
+    background: var(--cv-gray-50);
+}
+
+.cv-col-id {
+    width: 70px;
+}
+
+.cv-col-verified,
+.cv-col-enforce {
+    width: 160px;
+    text-align: center;
+}
+
+.cv-col-actions {
+    width: 140px;
+    text-align: center;
+}
+
+/* ─── Client Row ─────────────────────────────────── */
+.cv-client-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cv-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--cv-gray-100);
+    flex-shrink: 0;
+}
+
+.cv-client-name {
+    font-weight: 600;
+    color: var(--cv-gray-800);
+    font-size: 0.9rem;
+}
+
+.cv-client-name a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cv-client-name a:hover {
+    color: var(--cv-primary);
+}
+
+/* ─── Toggle Switch ──────────────────────────────── */
+.cv-toggle {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 26px;
+}
+
+.cv-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.cv-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--cv-gray-300);
+    border-radius: 26px;
+    transition: all 0.3s ease;
+}
+
+.cv-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.cv-toggle input:checked+.cv-toggle-slider {
+    background: var(--cv-success);
+}
+
+.cv-toggle input:checked+.cv-toggle-slider::before {
+    transform: translateX(22px);
+}
+
+.cv-toggle input:focus+.cv-toggle-slider {
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.2);
+}
+
+/* ─── Status Pills ───────────────────────────────── */
+.cv-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.cv-pill-pending {
+    background: var(--cv-warning-bg);
+    color: var(--cv-warning);
+}
+
+.cv-pill-accepted {
+    background: var(--cv-success-bg);
+    color: var(--cv-success);
+}
+
+.cv-pill-rejected {
+    background: var(--cv-danger-bg);
+    color: var(--cv-danger);
+}
+
+.cv-pill-verified {
+    background: var(--cv-success-bg);
+    color: var(--cv-success);
+}
+
+.cv-pill-unverified {
+    background: var(--cv-danger-bg);
+    color: var(--cv-danger);
+}
+
+/* ─── Buttons ────────────────────────────────────── */
+.cv-btn-sm {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    border-radius: var(--cv-radius);
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--cv-transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cv-btn-view {
+    background: var(--cv-primary-bg);
+    color: var(--cv-primary);
+}
+
+.cv-btn-view:hover {
+    background: var(--cv-primary);
+    color: #fff;
+}
+
+.cv-btn-accept {
+    background: var(--cv-success-bg);
+    color: var(--cv-success);
+}
+
+.cv-btn-accept:hover {
+    background: var(--cv-success);
+    color: #fff;
+}
+
+.cv-btn-reject {
+    background: var(--cv-warning-bg);
+    color: var(--cv-warning);
+}
+
+.cv-btn-reject:hover {
+    background: var(--cv-warning);
+    color: #fff;
+}
+
+.cv-btn-delete {
+    background: var(--cv-danger-bg);
+    color: var(--cv-danger);
+}
+
+.cv-btn-delete:hover {
+    background: var(--cv-danger);
+    color: #fff;
+}
+
+/* ─── Gateway Row ────────────────────────────────── */
+.cv-gateway-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cv-gw-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--cv-radius);
+    background: var(--cv-gray-100);
+    color: var(--cv-gray-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+    border: 1px solid var(--cv-gray-200);
+}
+
+.cv-gw-name {
+    font-weight: 600;
+    color: var(--cv-gray-800);
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+.cv-gateway-intro {
+    padding: 12px 16px;
+    background: var(--cv-primary-bg);
+    border-radius: var(--cv-radius);
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: var(--cv-primary);
+}
+
+.cv-gateway-intro i {
+    margin-right: 6px;
+}
+
+.cv-gateway-intro p {
+    margin: 0;
+}
+
+/* ─── Loading & Empty States ─────────────────────── */
+.cv-loading {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--cv-gray-400);
+    font-size: 0.95rem;
+}
+
+.cv-loading i {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.cv-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--cv-gray-400);
+}
+
+.cv-empty-state i {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    display: block;
+    opacity: 0.4;
+}
+
+.cv-empty-state p {
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ─── Pagination ─────────────────────────────────── */
+.cv-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 16px 0;
+}
+
+.cv-page-btn {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--cv-gray-200);
+    background: #fff;
+    color: var(--cv-gray-600);
+    border-radius: var(--cv-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all var(--cv-transition);
+}
+
+.cv-page-btn:hover {
+    background: var(--cv-gray-50);
+    border-color: var(--cv-primary);
+    color: var(--cv-primary);
+}
+
+.cv-page-btn.active {
+    background: var(--cv-primary);
+    border-color: var(--cv-primary);
+    color: #fff;
+}
+
+.cv-page-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* ─── Document Card (Modal) ──────────────────────── */
+.cv-doc-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid var(--cv-gray-200);
+    border-radius: var(--cv-radius-lg);
+    margin-bottom: 12px;
+    transition: all var(--cv-transition);
+    background: #fff;
+}
+
+.cv-doc-card:hover {
+    box-shadow: var(--cv-shadow-md);
+    border-color: var(--cv-gray-300);
+}
+
+.cv-doc-thumb {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--cv-radius);
+    object-fit: cover;
+    background: var(--cv-gray-100);
+    flex-shrink: 0;
+    border: 1px solid var(--cv-gray-200);
+    cursor: pointer;
+}
+
+.cv-doc-thumb-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--cv-radius);
+    background: var(--cv-gray-100);
+    flex-shrink: 0;
+    border: 1px solid var(--cv-gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cv-gray-400);
+    font-size: 1.8rem;
+}
+
+.cv-doc-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cv-doc-name {
+    font-weight: 600;
+    color: var(--cv-gray-800);
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    word-break: break-all;
+}
+
+.cv-doc-type {
+    font-size: 0.8rem;
+    color: var(--cv-gray-500);
+    margin-bottom: 8px;
+}
+
+.cv-doc-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+/* ─── Client Area — Status Banner ────────────────── */
+.cv-status-banner {
+    padding: 20px 24px;
+    border-radius: var(--cv-radius-lg);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: var(--cv-shadow);
+}
+
+.cv-status-banner i {
+    font-size: 1.6rem;
+}
+
+.cv-status-banner-info {
+    flex: 1;
+}
+
+.cv-status-banner-info span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-top: 4px;
+    opacity: 0.8;
+}
+
+.cv-status-verified {
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.cv-status-unverified {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #92400e;
+    border: 1px solid #fbbf24;
+}
+
+.cv-status-loading {
+    background: var(--cv-gray-100);
+    color: var(--cv-gray-500);
+    padding: 20px 24px;
+    border-radius: var(--cv-radius-lg);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* ─── Client Area — Upload ───────────────────────── */
+.cv-panel {
+    border-radius: var(--cv-radius-lg) !important;
+    overflow: hidden;
+    box-shadow: var(--cv-shadow);
+    margin-bottom: 24px;
+    border: 1px solid var(--cv-gray-200) !important;
+}
+
+.cv-panel-header {
+    background: var(--cv-gray-50) !important;
+    border-bottom: 1px solid var(--cv-gray-200) !important;
+    padding: 16px 20px !important;
+}
+
+.cv-panel-header h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cv-gray-800);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cv-panel-header h3 i {
+    color: var(--cv-primary);
+}
+
+.cv-upload-desc {
+    font-size: 0.9rem;
+    color: var(--cv-gray-500);
+    margin-bottom: 20px;
+}
+
+.cv-doc-type-selector {
+    margin-bottom: 16px;
+}
+
+.cv-doc-type-selector label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--cv-gray-700);
+    margin-bottom: 10px;
+}
+
+.cv-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.cv-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 2px solid var(--cv-gray-200);
+    background: #fff;
+    color: var(--cv-gray-600);
+    transition: all var(--cv-transition);
+    user-select: none;
+}
+
+.cv-chip:hover {
+    border-color: var(--cv-primary-light);
+    color: var(--cv-primary);
+}
+
+.cv-chip.active {
+    border-color: var(--cv-primary);
+    background: var(--cv-primary-bg);
+    color: var(--cv-primary);
+    font-weight: 600;
+}
+
+.cv-chip input[type="radio"] {
+    display: none;
+}
+
+/* ─── Dropzone ───────────────────────────────────── */
+.cv-dropzone {
+    border: 2px dashed var(--cv-gray-300);
+    border-radius: var(--cv-radius-lg);
+    padding: 40px 20px;
+    text-align: center;
+    transition: all var(--cv-transition);
+    cursor: pointer;
+    background: var(--cv-gray-50);
+}
+
+.cv-dropzone.dragover {
+    border-color: var(--cv-primary);
+    background: var(--cv-primary-bg);
+}
+
+.cv-dropzone-icon {
+    font-size: 2.5rem;
+    color: var(--cv-gray-400);
+    margin-bottom: 12px;
+    display: block;
+}
+
+.cv-dropzone p {
+    font-size: 0.95rem;
+    color: var(--cv-gray-600);
+    margin: 0 0 6px;
+    font-weight: 500;
+}
+
+.cv-dropzone span {
+    font-size: 0.8rem;
+    color: var(--cv-gray-400);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.cv-browse-btn {
+    border-radius: var(--cv-radius) !important;
+    font-weight: 500;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+/* ─── Progress Bar ───────────────────────────────── */
+.cv-dropzone-progress {
+    padding: 20px 0 0;
+}
+
+.cv-progress-bar {
+    height: 8px;
+    background: var(--cv-gray-200);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.cv-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--cv-primary), var(--cv-primary-light));
+    border-radius: 8px;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+#cv-progress-text {
+    font-size: 0.8rem;
+    color: var(--cv-gray-500);
+}
+
+/* ─── Client Documents Table ─────────────────────── */
+.cv-doc-preview {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cv-doc-preview-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    object-fit: cover;
+    background: var(--cv-gray-100);
+    border: 1px solid var(--cv-gray-200);
+}
+
+.cv-doc-preview-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background: var(--cv-gray-100);
+    border: 1px solid var(--cv-gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cv-gray-400);
+}
+
+/* ─── Modal Overrides ────────────────────────────── */
+#cv-docs-modal .modal-header {
+    background: var(--cv-gray-50);
+    border-bottom: 1px solid var(--cv-gray-200);
+}
+
+#cv-docs-modal .modal-title {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#cv-docs-modal .modal-title i {
+    color: var(--cv-primary);
+}
+
+#cv-docs-modal .modal-body {
+    padding: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+/* ─── Image Lightbox ─────────────────────────────── */
+.cv-lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+    animation: cvFadeIn 0.2s ease;
+}
+
+.cv-lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: var(--cv-radius);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes cvFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ─── Responsive ─────────────────────────────────── */
+@media (max-width: 768px) {
+    .cv-toolbar {
+        flex-direction: column;
+    }
+
+    .cv-search-wrap {
+        width: 100%;
+    }
+
+    .cv-doc-card {
+        flex-direction: column;
+    }
+
+    .cv-doc-thumb,
+    .cv-doc-thumb-placeholder {
+        width: 100%;
+        height: 120px;
+    }
+
+    .cv-table thead th {
+        font-size: 0.7rem;
+        padding: 8px 10px;
+    }
+
+    .cv-table tbody td {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
