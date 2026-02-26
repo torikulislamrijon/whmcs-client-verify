@@ -5,7 +5,7 @@
   <a href="https://github.com/torikulislamrijon/whmcs-client-verify/stargazers"><img src="https://img.shields.io/github/stars/torikulislamrijon/whmcs-client-verify" alt="Stars Badge"/></a>
   <a href="https://github.com/torikulislamrijon/whmcs-client-verify/network/members"><img src="https://img.shields.io/github/forks/torikulislamrijon/whmcs-client-verify" alt="Forks Badge"/></a>
   <a href="https://github.com/torikulislamrijon/whmcs-client-verify/issues"><img src="https://img.shields.io/github/issues/torikulislamrijon/whmcs-client-verify" alt="Issues Badge"/></a>
-  ![License](https://img.shields.io/github/license/torikulislamrijon/whmcs-client-verify?style=for-the-badge)
+  ![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)
 </div>
 
 <br>
@@ -109,4 +109,4 @@ Contributions are completely welcome! If you find a bug or have a feature reques
 
 ## 📄 License
 
-This open-source project is licensed under the **MIT License**. You are free to use, modify, and distribute this module as permitted by the license.
+This project is licensed under a **Custom Proprietary License**. It is provided for personal and internal business use only. You are NOT permitted to sell or redistribute this software for commercial purposes. See the [LICENSE](LICENSE) file for complete details.
