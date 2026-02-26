@@ -46,10 +46,7 @@ class VerificationService
                 if (is_numeric($search)) {
                     $q->where('c.id', (int) $search);
                 }
-                $q->orWhere('c.firstname', 'like', '%' . $search . '%')
-                    ->orWhere('c.lastname', 'like', '%' . $search . '%')
-                    ->orWhere('c.email', 'like', '%' . $search . '%')
-                    ->orWhere('c.companyname', 'like', '%' . $search . '%')
+                $q->orWhere('c.email', 'like', '%' . $search . '%')
                     ->orWhere(Capsule::raw("CONCAT(c.firstname, ' ', c.lastname)"), 'like', '%' . $search . '%');
             });
         }
