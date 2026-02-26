@@ -5,7 +5,7 @@
   <a href="https://github.com/torikulislamrijon/whmcs-client-verify/stargazers"><img src="https://img.shields.io/github/stars/torikulislamrijon/whmcs-client-verify" alt="Stars Badge"/></a>
   <a href="https://github.com/torikulislamrijon/whmcs-client-verify/network/members"><img src="https://img.shields.io/github/forks/torikulislamrijon/whmcs-client-verify" alt="Forks Badge"/></a>
   <a href="https://github.com/torikulislamrijon/whmcs-client-verify/issues"><img src="https://img.shields.io/github/issues/torikulislamrijon/whmcs-client-verify" alt="Issues Badge"/></a>
-  ![License](https://img.shields.io/github/license/torikulislamrijon/whmcs-client-verify?style=for-the-badge&cachebust=1)
+  ![License](https://img.shields.io/github/license/torikulislamrijon/whmcs-client-verify)
 </div>
 
 <br>
