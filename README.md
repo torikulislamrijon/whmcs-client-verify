@@ -5,7 +5,7 @@
   <a href="https://github.com/torikulislamrijon/whmcs-client-verify/stargazers"><img src="https://img.shields.io/github/stars/torikulislamrijon/whmcs-client-verify" alt="Stars Badge"/></a>
   <a href="https://github.com/torikulislamrijon/whmcs-client-verify/network/members"><img src="https://img.shields.io/github/forks/torikulislamrijon/whmcs-client-verify" alt="Forks Badge"/></a>
   <a href="https://github.com/torikulislamrijon/whmcs-client-verify/issues"><img src="https://img.shields.io/github/issues/torikulislamrijon/whmcs-client-verify" alt="Issues Badge"/></a>
-  <a href="https://github.com/torikulislamrijon/whmcs-client-verify/blob/main/LICENSE"><img src="https://img.shields.io/github/license/torikulislamrijon/whmcs-client-verify" alt="License Badge"/></a>
+  ![License](https://img.shields.io/github/license/torikulislamrijon/whmcs-client-verify?style=for-the-badge)
 </div>
 
 <br>
@@ -24,6 +24,12 @@
 ## 📸 Screenshots
 
 *(Add screenshots of your Admin Area Dashboard, Client Upload Interface, and Document Review Modal here)*
+
+### Client Upload Interface
+![Client Upload Interface](docs/screenshots/client_upload.png)
+
+### Admin Document Review Modal
+![Admin Review Modal](docs/screenshots/admin_review.png)
 
 ---
 
@@ -103,4 +109,4 @@ Contributions are completely welcome! If you find a bug or have a feature reques
 
 ## 📄 License
 
-This open-source project is licensed under the **GPL-2.0 License**. You are free to use, modify, and distribute this module as permitted by the license.
+This open-source project is licensed under the **MIT License**. You are free to use, modify, and distribute this module as permitted by the license.
