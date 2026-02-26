@@ -23,7 +23,7 @@
 
 ## 📸 Screenshots
 
-*(Add screenshots of your Admin Area Dashboard, Client Upload Interface, and Document Review Modal here)*
+
 
 ### Client Upload Interface
 ![Client Upload Interface](docs/screenshots/client_upload.png)
