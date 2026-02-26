@@ -23,7 +23,7 @@ function clientverify_config(): array
     return [
         'name' => 'Client Verification',
         'description' => 'Manual client identity verification with document upload, admin approval workflow, and per-gateway checkout enforcement.',
-        'version' => '1.0.0',
+        'version' => '1.0.3',
         'author' => '<a href="https://github.com/torikulislamrijon" target="_blank">Torikul Islam Rijon</a>',
         'language' => 'english',
         'fields' => [
